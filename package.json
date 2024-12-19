@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@linwooddev/style": "^0.3.9",
-    "astro": "^4.16.3",
+    "astro": "^4.16.18",
     "sass": "^1.79.5",
     "typescript": "^5.6.3"
   }

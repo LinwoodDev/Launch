@@ -68,7 +68,9 @@ const appWebPreviewUrl = import.meta.env.APP_WEB_PREVIEW_URL;
     return `${base}${location.pathname}${location.search}${location.hash}`;
   };
   const launchButtons = document.querySelectorAll(".launch-btn");
-  launchButtons.forEach((button) => {
-    button.setAttribute("href", getPath(button.getAttribute("href")));
-  });
+  for (const button of launchButtons) {
+    const href = button.getAttribute("href");
+    if (!href) continue;
+    button.setAttribute("href", getPath(href));
+  }
 </script>

@@ -18,7 +18,7 @@ jobs:
             env: |
               APP_NAME=Butterfly
               APP_DOWNLOAD_URL=https://butterfly.linwood.dev/downloads
-              APP_WEB_URL=https://butterfly.linwood.dev
+              APP_WEB_URL=https://web.butterfly.linwood.dev
               APP_WEB_PREVIEW_URL=https://preview.butterfly.linwood.dev
             asset_links: |
               [

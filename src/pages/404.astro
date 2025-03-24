@@ -10,15 +10,15 @@ const appWebPreviewUrl = import.meta.env.APP_WEB_PREVIEW_URL;
 ---
 
 <Layout title={`Launch ${appName}`}>
-  <main class="col align-center justify-center container-md h-full gap-sm">
-    <div class="pb-md col align-center">
+  <main class="col align-center justify-center container-md gap-sm">
+    <div class="pb-md col align-center pt-xl">
       <h1 class="title mt-none">Launch{appName && ` ${appName}`}</h1>
       <p>
         On mobile it should start automatically. If not, look in the address bar
         for the app icon and tap it.
       </p>
     </div>
-    <div class="row align-center wrap gap-xs">
+    <div class="row align-center wrap gap-xs justify-center">
       {
         appWebUrl && (
           <a class="btn primary launch-btn" href={appWebUrl} target="_blank">
@@ -38,7 +38,7 @@ const appWebPreviewUrl = import.meta.env.APP_WEB_PREVIEW_URL;
         )
       }
     </div>
-    <div class="row align-center wrap gap-xs">
+    <div class="row align-center wrap gap-xs justify-center">
       {
         appLaunchUrl && (
           <a class="btn primary launch-btn" href={appLaunchUrl}>
@@ -50,15 +50,6 @@ const appWebPreviewUrl = import.meta.env.APP_WEB_PREVIEW_URL;
         >Download {appName}</a
       >
     </div>
-    <hr class="mv-md" />
-    <a
-      class="card paper pv-xs ph-sm row gap-xs align-center bold"
-      href="https://linwood.dev"
-      target="_blank"
-    >
-      <img src="/favicon.svg" width="32" alt="Linwood logo" />
-      Linwood
-    </a>
   </main>
 </Layout>
 

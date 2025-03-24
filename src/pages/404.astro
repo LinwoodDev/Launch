@@ -1,0 +1,74 @@
+---
+import "@linwooddev/style/scss/main.scss";
+import Layout from "../layouts/Layout.astro";
+
+const appName = import.meta.env.APP_NAME;
+const appLaunchUrl = import.meta.env.APP_LAUNCH_URL;
+const appDownloadUrl = import.meta.env.APP_DOWNLOAD_URL;
+const appWebUrl = import.meta.env.APP_WEB_URL;
+const appWebPreviewUrl = import.meta.env.APP_WEB_PREVIEW_URL;
+---
+
+<Layout title={`Launch ${appName}`}>
+  <main class="col align-center justify-center container-md h-full gap-sm">
+    <div class="pb-md col align-center">
+      <h1 class="title mt-none">Launch{appName && ` ${appName}`}</h1>
+      <p>
+        On mobile it should start automatically. If not, look in the address bar
+        for the app icon and tap it.
+      </p>
+    </div>
+    <div class="row align-center wrap gap-xs">
+      {
+        appWebUrl && (
+          <a class="btn primary launch-btn" href={appWebUrl} target="_blank">
+            Open in browser
+          </a>
+        )
+      }
+      {
+        appWebPreviewUrl && (
+          <a
+            class="btn secondary launch-btn"
+            href={appWebPreviewUrl}
+            target="_blank"
+          >
+            Open preview in browser
+          </a>
+        )
+      }
+    </div>
+    <div class="row align-center wrap gap-xs">
+      {
+        appLaunchUrl && (
+          <a class="btn primary launch-btn" href={appLaunchUrl}>
+            Launch on desktop
+          </a>
+        )
+      }
+      <a class="btn secondary" href={appDownloadUrl} target="_blank"
+        >Download {appName}</a
+      >
+    </div>
+    <hr class="mv-md" />
+    <a
+      class="card paper pv-xs ph-sm row gap-xs align-center bold"
+      href="https://linwood.dev"
+      target="_blank"
+    >
+      <img src="/favicon.svg" width="32" alt="Linwood logo" />
+      Linwood
+    </a>
+  </main>
+</Layout>
+
+<script>
+  const getPath = (base: string) => {
+    const location = window.location;
+    return `${base}${location.pathname}${location.search}${location.hash}`;
+  };
+  const launchButtons = document.querySelectorAll(".launch-btn");
+  launchButtons.forEach((button) => {
+    button.setAttribute("href", getPath(button.getAttribute("href")));
+  });
+</script>

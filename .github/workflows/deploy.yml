@@ -50,12 +50,12 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
       - name: Add env
         run: |
-          echo ${{ matrix.apps.env }} >> .env
+          echo "${{ matrix.apps.env }}" >> .env
       - name: Add asset links if available
         if: matrix.apps.asset_links
         run: |
           mkdir -p public/.well-known
-          echo ${{ matrix.apps.asset_links }} >> public/.well-known/assetlinks.json
+          echo "${{ matrix.apps.asset_links }}" >> public/.well-known/assetlinks.json
       - name: Install dependencies
         run: pnpm install
       - name: Build

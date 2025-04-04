@@ -36,6 +36,12 @@ jobs:
                   }
                 }
               ]
+          - name: setonix
+            directory: launch.setonix.linwood
+            env: |
+              APP_NAME=Setonix
+              APP_DOWNLOAD_URL=https://setonix.linwood.dev/downloads
+              APP_WEB_URL=https://web.setonix.linwood.dev
     steps:
       - uses: actions/checkout@v4
       - name: Install pnpm

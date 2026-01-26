@@ -9,12 +9,12 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.28.2",
   "dependencies": {
-    "@astrojs/check": "^0.9.5",
+    "@astrojs/check": "^0.9.6",
     "@linwooddev/style": "^0.4.2",
-    "astro": "^5.15.6",
-    "sass": "^1.94.0",
+    "astro": "^5.16.15",
+    "sass": "^1.97.3",
     "typescript": "^5.9.3"
   }
 }

@@ -42,6 +42,22 @@ jobs:
               APP_NAME=Setonix
               APP_DOWNLOAD_URL=https://setonix.linwood.dev/downloads
               APP_WEB_URL=https://web.setonix.linwood.dev
+            asset_links: |
+              [
+                {
+                  "relation": [
+                    "delegate_permission/common.handle_all_urls",
+                    "delegate_permission/common.get_login_creds"
+                  ],
+                  "target": {
+                    "namespace": "android_app",
+                    "package_name": "dev.linwood.setonix",
+                    "sha256_cert_fingerprints": [
+                      "54:EF:36:1F:4D:0B:3B:AD:01:10:5E:B3:20:AD:9C:C8:16:4D:CF:81:F5:F5:FC:27:70:A9:17:64:2F:EC:EF:7D"
+                    ]
+                  }
+                }
+              ]
     steps:
       - uses: actions/checkout@v5
       - name: Install pnpm

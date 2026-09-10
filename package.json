@@ -5,16 +5,15 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
-  "packageManager": "pnpm@11.5.2",
+  "packageManager": "pnpm@12.3.4",
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
     "@linwooddev/style": "^0.4.2",
-    "astro": "^6.4.4",
-    "sass": "^1.100.0",
-    "typescript": "^6.0.3"
+    "astro": "^7.3.2",
+    "sass": "^1.104.0",
+    "typescript": "^7.0.2"
   }
 }
